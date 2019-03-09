@@ -43,4 +43,4 @@ class Orders(db.Model):
         self.name = name
         self.item = item
         self.kind = kind
-        self.amdount_paid = amount_paid
+        self.amount_paid = amount_paid
