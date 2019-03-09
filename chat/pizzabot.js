@@ -47,3 +47,45 @@ bot.dialog('/', function (session) {
 
 
 // Dialogs
+
+bot.dialog('/help', [
+	(session) => {
+		var help_msgs = {
+		"What\'s on the menu": "/menu",
+		"I want food": "/food",
+		};
+
+		builder.Prompts.choice(session, "Choose one:", help_msgs);
+	},
+	(session, results) => {
+		console.log(results.response);
+	}
+]);
+
+bot.dialog('/profile', [
+	(session, args, next) => {
+		if (!session.userData.name) {
+			builder.Prompts.text(session, 'Hi! What is your name?');
+		} else {
+			next({ response: session.userData.name });
+		}
+	},
+	(session, results) => {
+		session.userData.name = results.response;
+		session.send('Hi ' +
+			session.userData.name +
+			". This is PizzaOut, a chat bot for placing orders with our Pizza Stand. Type \'help\' to see what I can do.");
+		session.endDialog();
+	}
+]);
+
+bot.dialog('/menu', (session) => {
+	menu.forEach( (item) => {
+		if (item.types && item.name != 'drinks') {
+			item.types.forEach( (type) => { session.send(type + " " + item.name + ": $" + item.price)});
+		} else {
+			session.send(item.name + ": $" + item.price);
+		}
+	});
+	session.endDialog();
+});
