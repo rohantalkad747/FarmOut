@@ -1,22 +1,23 @@
 {
 	"name": "Rohan",
 	"id": 1,
-	"amount_due": 13.00,
+	"amount_due": 6.00,
 	"amount_paid": 0,
 	"order": [
 		{
-			"name": "pizza",
-			"type": "pineapple",
+			"name": "eggs",
+			"type": "duck",
 			"count": 1,
-			"price": 12.00
+			"price": 3.00
 		},
 		{
-			"name": "coke",
+			"name": "milk",
+			"type":"cow",
 			"count": 1,
-			"price": 1.00
+			"price": 3.00
 		}
 	],
 	"combos" : [
-		"SuperDuper Cheesy with Garlic Bread"
+		"Meat Lovers"
 	]
 }
