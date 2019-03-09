@@ -7,36 +7,39 @@
         "amount_paid": 0,
         "order": [
             {
-                "name": "pizza",
-                "type": "pepperoni",
+                "name": "eggs",
+                "type": "chicken",
                 "count": 1,
                 "price": 3.00,
                 "combo": false
 		},
             {
-                "name": "coke",
+                "name": "milk",
+                "type" : "cow",
                 "count": 4,
                 "price": 3.00
 		}
 	   ],
     },
     {
-        "name": "John Doe",
+        "name": "Eric Shaver",
         "id": 2,
         "order_total": 14.99,
         "amount_paid": 0,
         "order": [
             {
-                "name": "veggie poutine",
-                "type": "veggie",
-                "count": 74,
-                "price": 3.00,
-                "combo": false
+              "name": "eggs",
+              "type": "duck",
+              "count": 1,
+              "price": 3.00,
+              "combo": false
         },
             {
-                "name": "eating sticks",
-                "count": 1,
-                "price": 3.00
+              "name": "meat",
+              "type": "cow",
+              "count": 1,
+              "price": 8.00,
+              "combo": false
         }
        ],
     },
@@ -47,23 +50,25 @@
         "amount_paid": 0,
         "order": [
             {
-                "name": "chilli cheese dog",
-                "type": "spicy",
-                "count": 1,
-                "price": 4.00,
-                "combo": false
+              "name": "meat",
+              "type": "pig",
+              "count": 1,
+              "price": 8.00,
+              "combo": false
         },
             {
-                "name": "coke",
-                "count": 1,
-                "price": 1.00
+              "name": "milk",
+              "type": "cow",
+              "count": 1,
+              "price": 3.00,
+              "combo": false
         }
        ],
     }]
     var num_items = input.length
     var title = document.createElement("h2");
     title.id = "title";
-    title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
+    title.innerHTML = "Welcome, you have "+ num_items +" order(s)!";
     document.body.appendChild(title);
 
 
@@ -173,7 +178,6 @@
         num_items = num_items - 1;
         title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
     });
-<<<<<<< HEAD
     for (var j = 0; j < input.length; j++) {
         $(function() {
             $('.yourCountdownContainer'+j).countdown({
@@ -182,6 +186,3 @@
         });
     }
 })(jQuery); // End of use strict
-=======
-})(jQuery); // End of use strict
->>>>>>> 8a769477d0ca7e9eb67348a9ea8609b12061ebb0
