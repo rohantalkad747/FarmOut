@@ -39,9 +39,9 @@ bot.dialog('/', function (session) {
 			} else if (intent == "help") {
 				session.beginDialog('/help');
 			} else {
-				session.send('Don't really understand');
+				session.send('I don't really understand');
 			}
-		})
+		}
 		.catch(() => session.send('That\'s nice.'));
 });
 
@@ -89,3 +89,25 @@ bot.dialog('/menu', (session) => {
 	});
 	session.endDialog();
 });
+
+bot.dialog('/food', [
+	(session, args, next) => {
+        if (!args) {
+            builder.Prompts.text(session, "What do you want to order?");
+        } else {
+            next({ response: args });
+        }
+	},
+	(session, results) => {
+		if (results.response && results.response != 'pizza') {
+			var item = {
+				"name": results.response,
+				"price": 0.00
+			};
+			var order = session.privateConversationData.order = session.privateConversationData.order || [];
+			order.push(item);
+			console.log(order);
+			session.send("Anything else?", results.response);
+		}
+	}
+]);
