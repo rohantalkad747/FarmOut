@@ -99,7 +99,7 @@ bot.dialog('/food', [
         }
 	},
 	(session, results) => {
-		if (results.response && results.response != 'pizza') {
+		if (results.response) {
 			var item = {
 				"name": results.response,
 				"price": 0.00
