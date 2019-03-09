@@ -26,12 +26,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = conDEBUG
 db = SQLAlchemy(app)
 
 class Orders(db.Model):
-    __tablename__ = 'dog_base'
+    __tablename__ = 'pizza_base'
 
     o_id = db.Column('O_id', db.Integer, primary_key=True)
     name = db.Column('name', db.String)
     item = db.Column('item', db.String)
-    kind = db.Column('beef', db.String)
+    kind = db.Column('pepperoni', db.String)
     count = db.Column('count', db.Integer)
     order_total = db.Column('order_total', db.Float)
     amount_paid = db.Column('amount_paid', db.Float)
