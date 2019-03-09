@@ -1,20 +1,20 @@
 (function ($) {
     "use strict"; // Start of use strict
     var input = [{
-        "name": "Kohilan Moh",
+        "name": "Rohan Talkad",
         "id": 1,
         "order_total": 12.50,
         "amount_paid": 0,
         "order": [
             {
-                "name": "hot dog",
-                "type": "beef",
+                "name": "pizza",
+                "type": "pepperoni",
                 "count": 1,
                 "price": 3.00,
                 "combo": false
 		},
             {
-                "name": "fries",
+                "name": "coke",
                 "count": 4,
                 "price": 3.00
 		}
@@ -138,7 +138,7 @@
             circle.className += 'circle';
             listItem.appendChild(circle);
             circle.appendChild(itemCount);
-            
+
             //Name
             var itemName = document.createElement("H2");
             itemName.className += 'itemName';
