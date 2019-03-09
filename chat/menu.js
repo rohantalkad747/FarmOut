@@ -1,21 +1,26 @@
 const menu = [
 	{
-		"name": "pizza",
+		"name": "eggs",
 		"category": "food",
-		"types": ['cheese', 'pepperoni', 'vegan'],
+		"types": ['duck', 'chicken', 'quail'],
 		"price": 3.00
 	},
 	{
-		"name": "pasta",
+		"name": "meat",
 		"category": "food",
-		"types": ['italian', 'greek', 'vegan'],
+		"types": ['chicken', 'cow', 'pig'],
 		"price": 8.00
 	},
 	{
-		"name": "drinks",
+		"name": "milk",
 		"category": "drink",
-		"types": ['coke', 'orange juice', 'root beer'],
+		"types": ['cow', 'pig', 'sheep'],
 		"price": 3.00
+	},
+	{
+		"name": "produce"
+		"category": "food"
+		"types":['apple', 'corn', 'wheat', 'blueberry']
 	}
 ];
 // export modules
