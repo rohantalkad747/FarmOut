@@ -1,0 +1,22 @@
+{
+	"name": "Rohan",
+	"id": 1,
+	"amount_due": 13.00,
+	"amount_paid": 0,
+	"order": [
+		{
+			"name": "pizza",
+			"type": "pineapple",
+			"count": 1,
+			"price": 12.00
+		},
+		{
+			"name": "coke",
+			"count": 1,
+			"price": 1.00
+		}
+	],
+	"combos" : [
+		"SuperDuper Cheesy with Garlic Bread"
+	]
+}
