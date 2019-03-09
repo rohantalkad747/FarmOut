@@ -29,7 +29,7 @@
             {
                 "name": "veggie poutine",
                 "type": "veggie",
-                "count": 74,
+                "count": 4,
                 "price": 3.00,
                 "combo": false
         },
@@ -63,7 +63,7 @@
     var num_items = input.length
     var title = document.createElement("h2");
     title.id = "title";
-    title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
+    title.innerHTML = "Welcome, you have "+ num_items +" order(s)!";
     document.body.appendChild(title);
 
 
@@ -173,7 +173,6 @@
         num_items = num_items - 1;
         title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
     });
-<<<<<<< HEAD
     for (var j = 0; j < input.length; j++) {
         $(function() {
             $('.yourCountdownContainer'+j).countdown({
@@ -182,6 +181,3 @@
         });
     }
 })(jQuery); // End of use strict
-=======
-})(jQuery); // End of use strict
->>>>>>> 8a769477d0ca7e9eb67348a9ea8609b12061ebb0
