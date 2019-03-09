@@ -147,9 +147,8 @@
             //Name
             var itemName = document.createElement("H2");
             itemName.className += 'itemName';
-            itemName.innerHTML = list_of_items[i].name;
+            itemName.innerHTML = list_of_items[i].name + ": " + list_of_items[i].type;
             listItem.appendChild(itemName);
-
         }
 
         var doneButton = document.createElement("BUTTON");
